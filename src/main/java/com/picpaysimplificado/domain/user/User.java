@@ -1,6 +1,7 @@
 package com.picpaysimplificado.domain.user;
 
 import java.math.BigDecimal;
+import java.util.Optional;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,13 +23,15 @@ import lombok.Setter;
 @AllArgsConstructor
 @EqualsAndHashCode(of="id")
 public class User {
+
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	
 	private Long id;
 	private String firstName;
 	private String lastName;
-	
+
+	public Optional<User> optional;
 	@Column(unique=true)
 	private String document;
 		
@@ -41,9 +44,7 @@ public class User {
 	
 	@Enumerated(EnumType.STRING)
 	private UserType userType;
-	
-	
-	
-	
+
+
 
 }
