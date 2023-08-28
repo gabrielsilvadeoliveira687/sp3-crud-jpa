@@ -1,4 +1,4 @@
-package com.picpaysimplificado.domain;
+package com.picpaysimplificado.domain.transaction;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
