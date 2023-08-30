@@ -45,6 +45,7 @@ public class User {
 	
 	@Enumerated(EnumType.STRING)
 	private UserType userType;
+<<<<<<< HEAD
 
 	public  User(UserDTO data){
 		this.firstName= data.firstName();
@@ -56,5 +57,8 @@ public class User {
 		this.email= data.email();
 	}
 
+=======
+	
+>>>>>>> 466f858cd88770e766070a3703062ffb1bd5b9ef
 
-}
+	}
