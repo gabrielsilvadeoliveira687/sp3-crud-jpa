@@ -6,9 +6,6 @@ import lombok.Setter;
 
 
 public enum UserType {
-	
 	COMMON,
 	MERCHANT
-
-	
 }
