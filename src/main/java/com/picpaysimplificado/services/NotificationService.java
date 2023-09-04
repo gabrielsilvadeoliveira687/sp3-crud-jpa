@@ -7,9 +7,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import com.picpaysimplificado.domain.user.User;
+import org.springframework.http.HttpStatusCode;
 
 @Service
-public class NotificationService {
+public class  NotificationService {
     @Autowired
     private RestTemplate restTemplate;
 
@@ -19,8 +20,8 @@ public class NotificationService {
         ResponseEntity<String> notificationResponse = restTemplate.postForEntity("http://o4d9z.mocklab.io/notify", notificationRequest, String.class);
 
 
-        if(!notificationRequest. == HttpStatus.OK){
-            throw new Exception("Servico de notificacao esta away")
+        if(!(notificationResponse.getStatusCode() == HttpStatus.OK)){
+            throw new Exception("Servico de notificacao esta away");
         }
     }
 }
